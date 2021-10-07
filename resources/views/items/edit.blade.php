@@ -3,6 +3,18 @@
 @section('title', '編集画面')
 
 @section('content')
+@if ($errors ->any())
+<div class="error">
+    <p>
+        <b>{{ count($errors) }}件のエラーがあります</b>
+    </p>
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <form action="/items/{{ $item->id }}" method="post" enctype="multipart/form-data">
     @csrf
     @method('PATCH')

@@ -32,6 +32,15 @@
 <a class="btn btn-success" href="#" role="button">かごに入れる</a>
 <a class="btn btn-success" href="#" role="button">購入する</a>
 <br>
-<a href="/items/{{ $item->id }}/edit">編集する</a>
+<div>
+    <a href="/items/{{ $item->id }}/edit">編集する</a>
+</div>
+<div>
+<form action="/items/{{ $item->id }}" method="post">
+    @csrf
+    @method('DELETE')
+    <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
+</form>
+</div>
 <a href="{{ route('items.index')}}">戻る</a>
 @endsection

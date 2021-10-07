@@ -3,6 +3,18 @@
 @section('title', '登録画面')
 
 @section('content')
+@if ($errors ->any())
+<div class="error" >
+    <p>
+        <b>{{ count($errors) }}件のエラーがあります</b>
+    </p>
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <form action="/items" method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
