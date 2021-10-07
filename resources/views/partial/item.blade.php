@@ -1,6 +1,5 @@
 <div class="row">
     <div>
-        {{-- <img src="{{ url($item->img_url) }}" class="square-img"> --}}
         <img src="{{ Storage::disk('public')->url($item->img_url) }}" class="square-img"> 
     </div>
     <div class="ml-3">
