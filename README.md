@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -62,3 +62,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ -->
+
+# ホームメイド商品販売サイト
+### about this app
+- 商品を気軽にCRUDできるアプリ
+- 姉がホームメイド商品を作って売りたいといっていたので､販売アプリをプレゼントしたら喜ぶかなって思って作りました｡
+- 初期データとして､商品3つをSeederで登録しています｡
+
+### 実装機能
+- CRUD
+商品がCRUDできるようになっています
+バリデーションも実装済
+- ファイルアップロード
+画像を、ファイルアップロードできるようにしました｡
+ファイルアップロードするとき、画面上にプレビュー画像が表示されるようにしました
+アップロードした画像は、/storage/app/public/all_image配下に保存
+
+### 画面
+* 一覧画面
+![一覧画面](/Users/morizonoou/camp/08_laravel/OoMorizono_shop_app/storage/app/public/readme_image/index.png)
