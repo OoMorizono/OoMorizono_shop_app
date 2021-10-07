@@ -14,25 +14,27 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
-            [
-                'name' => 'ファブリック',
-            ],
-            [
-                'name' => 'キッチン雑貨',
-            ],
-            [
-                'name' => 'バス美容',
-            ],
-            [
-                'name' => 'ファッション雑貨',
-            ],
-            [
-                'name' => 'インテリア雑貨',
-            ],
-            [
-                'name' => 'ファブリック',
-            ],
-        ]);
+        if (!DB::table('categories')->first()) {
+            DB::table('categories')->insert([
+                [
+                    'name' => 'ファブリック',
+                ],
+                [
+                    'name' => 'キッチン雑貨',
+                ],
+                [
+                    'name' => 'バス美容',
+                ],
+                [
+                    'name' => 'ファッション雑貨',
+                ],
+                [
+                    'name' => 'インテリア雑貨',
+                ],
+                [
+                    'name' => 'ファブリック',
+                ],
+            ]);
+        }
     }
 }

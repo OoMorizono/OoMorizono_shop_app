@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
+use App\Models\Category;
+
+
 
 class ItemController extends Controller
 {
@@ -16,5 +19,56 @@ class ItemController extends Controller
     public function show(Item $item)
     {
         return view('items.show', compact('item'));
+    }
+
+    public function create()
+    {
+        $categories = Category::all();
+        return view('items.create', compact('categories'));
+    }
+
+    public function store(Request $request)
+    {
+
+        $item = new Item();
+
+        if (!empty($request->file('img_url'))) {
+            $path = $request->file('img_url')->store('all_image', 'public');
+            $item->img_url = $path;
+        }
+
+        $item->name = $request->name;
+        $item->category_id = $request->category;
+        $item->price = $request->price;
+        $item->pr = $request->pr;
+
+        $item->save();
+
+        return redirect('/items');
+    }
+
+    public function edit(Item $item)
+    {
+        $categories = Category::all();
+        return view('items.edit', compact('item','categories'));
+    }
+
+    public function update(Request $request, Item $item)
+    {
+        
+
+        if (!empty($request->file('img_url'))) {
+            $path = $request->file('img_url')->store('all_image', 'public');
+            $item->img_url = $path;
+        }
+
+        $item->name = $request->name;
+        $item->category_id = $request->category;
+        $item->price = $request->price;
+        $item->pr = $request->pr;
+
+        $item->save();
+
+        return redirect('/items');
     }
 }

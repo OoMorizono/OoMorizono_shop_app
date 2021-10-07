@@ -7,9 +7,9 @@
 <ul>
     @foreach ($items as $item)
     <li class="list-unstyled border mb-5 pl-3 shadow">
-        <a href="{{ route('items.show', $item) }}">{{ $item->name }}</a>
-    </li>
+@include('partial.item')    </li>
     @endforeach
 </ul>
 @endif
+<hr>
 @endsection
