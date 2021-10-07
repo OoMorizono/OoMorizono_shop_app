@@ -81,20 +81,20 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ### 画面
 * 一覧画面
-![一覧画面](./storage/app/public/readme_image/index.png)
+![一覧画面](./doc/readme_image/index.png)
 
 * 詳細画面
-![詳細画面](./storage/app/public/readme_image/show.png)
+![詳細画面](./doc/readme_image/show.png)
 
 * 登録画面
-![登録画面](./storage/app/public/readme_image/create.png)
+![登録画面](./doc/readme_image/create.png)
 
 * 編集画面
-![編集画面](./storage/app/public/readme_image/edit.png)
+![編集画面](./doc/readme_image/edit.png)
 
 * エラー登録画面
-![エラー登録](./storage/app/public/readme_image/create.validation.png)
+![エラー登録](./doc/readme_image/create.validation.png)
 
 * エラー編集画面
-![エラー編集](./storage/app/public/readme_image/edit.validation.png)
+![エラー編集](./doc/readme_image/edit.validation.png)
 
